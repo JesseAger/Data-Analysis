@@ -1,0 +1,77 @@
+
+Retail Sales Data Analysis Report
+=================================
+
+Introduction:
+-------------
+The dataset contains transactional data from a retail store. It includes the following columns:
+
+- Transaction ID
+- Date of purchase
+- Customer ID
+- Gender
+- Age of the customer
+- Product Category
+- Quantity purchased
+- Price per unit
+- Total Amount spent
+
+The data comprises 1000 transactions with no missing values. The average customer age is approximately 41 years, with ages ranging from 18 to 64. The average total spending is around 456 units, and prices range between 25 and 500 per unit.
+
+Initial Data Insights:
+----------------------
+Basic Statistics:
+- Mean Age: 41.39
+- Mean Quantity: 2.51
+- Mean Total Amount: 456.00
+- Max Total Amount: 2000
+- Most products have prices between 30 and 300
+
+Correlation Analysis:
+---------------------
+A Pearson correlation was computed between the Age and Total Amount spent. The correlation value quantifies the strength and direction of the linear relationship between these variables.
+
+The findings from the correlation analysis show a Pearson correlation coefficient of -0.0606, 
+indicating a very weak negative linear connection between the two examined variables—likely age and total expenditure. 
+This suggests that as people get older, there is a minor tendency for overall spending to drop, but the correlation
+ is very weak and probably not significant in real-world applications. Furthermore, the p-value linked to
+ this correlation is 0.0555, marginally exceeding the widely accepted significance level of 0.05. 
+This indicates that the noted correlation is not statistically significant and could have happened randomly.
+ As a result, we cannot assertively determine that there exists a significant or steady linear connection 
+between age and spending habits based on the given data. 
+
+
+Regression Analysis:
+--------------------
+A linear regression was performed with Age as the independent variable and Total Amount as the dependent variable.
+
+The findings from the Ordinary Least Squares (OLS) regression analysis indicate that the model accounts for 
+merely a tiny fraction of the variability in the dependent variable, with an R-squared value of 0.004. 
+This implies that age represents only 0.4% of the variation in total expenditure, demonstrating a minimal 
+explanatory capacity. The regression model consists of a single predictor variable, which is age, 
+and the coefficient associated with age is -2.4791. This indicates that for each extra year of age, 
+the overall expenditure declines by roughly 2.48 units. The p-value for the age variable is 0.056, 
+slightly exceeding the traditional threshold of 0.05, suggesting that the relationship is not 
+statistically significant at the 95% confidence level. The F-statistic of 3.675 for the overall 
+model and its related p-value of 0.0555 reinforce this conclusion, indicating that the model does 
+not provide a significant enhancement in prediction compared to a model without any predictors. 
+Furthermore, the intercept term is statistically significant and estimated to be around 558.62. 
+Diagnostic statistics like the Durbin-Watson value of 2.004 indicate an absence of significant 
+autocorrelation in the residuals, whereas the Omnibus and Jarque-Bera tests show that the residuals 
+differ from a normal distribution. In conclusion, although there is a small negative correlation 
+between age and overall spending, the regression model lacks robust or statistically significant 
+proof to affirm a substantial linear connection. 
+
+
+Conclusion:
+-----------
+The examination of the retail sales dataset indicates that although 
+there is a minor negative correlation between customer age and overall 
+spending, this connection is very weak and not statistically meaningful. 
+The correlation and regression analyses indicate that age on its own is 
+not a significant predictor of spending behavior in this dataset. 
+Consequently, various other factors might play a larger role in influencing 
+customer spending, and further examination that includes extra elements could 
+yield more profound understanding of buying behaviors. 
+
+
